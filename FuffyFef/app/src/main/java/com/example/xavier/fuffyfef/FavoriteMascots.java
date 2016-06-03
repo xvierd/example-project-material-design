@@ -6,6 +6,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import com.example.xavier.fuffyfef.adapter.MascotRecyclerAdapter;
+import com.example.xavier.fuffyfef.pojo.Mascot;
+
 import java.util.ArrayList;
 
 public class FavoriteMascots extends AppCompatActivity {
@@ -28,7 +31,7 @@ public class FavoriteMascots extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(llm);
-        MascotRecyclerAdapter adapter = new MascotRecyclerAdapter(mascots);
+        MascotRecyclerAdapter adapter = new MascotRecyclerAdapter(null,mascots);
         recyclerView.setAdapter(adapter);
     }
 

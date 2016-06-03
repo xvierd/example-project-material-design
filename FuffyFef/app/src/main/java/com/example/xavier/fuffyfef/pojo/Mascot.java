@@ -1,4 +1,4 @@
-package com.example.xavier.fuffyfef;
+package com.example.xavier.fuffyfef.pojo;
 
 /**
  * Created by xavier on 28/05/16.

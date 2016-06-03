@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Petagram</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_mascot">suchi</string>
+    <string name="contact">contacto</string>
+    <string name="about_me">acerca de</string>
+    <string name="about_me_text">Desarrollador informático, con capacidad de análisis, mejora continua, trabajo bajo presión y comprometido con el uso óptimo de recursos asignados dando así respuestas óptimas y escalables a largo plazo.
+</string>
+    <string name="hint_name">Nombre: </string>
+    <string name="hint_email">Correo</string>
+    <string name="hint_message">Descripción del mensaje</string>
+    <string name="send">enviar</string>
+
 </resources>

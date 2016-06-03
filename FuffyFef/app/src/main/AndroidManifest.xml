@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.xavier.fuffyfef">
 
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,11 +22,14 @@
         <activity
             android:name=".FavoriteMascots"
             android:parentActivityName=".MainActivity">
-            <!--suport v4.0 o lt-->
+
+            <!-- suport v4.0 o lt -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"></meta-data>
+                android:value=".MainActivity" />
         </activity>
+        <activity android:name=".AboutMeActivity" />
+        <activity android:name=".ContactActivity"></activity>
     </application>
 
 </manifest>

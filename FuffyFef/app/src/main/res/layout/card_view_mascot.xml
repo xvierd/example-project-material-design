@@ -31,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/ly_image"
             android:layout_marginLeft="0dp"
+            android:visibility="gone"
             android:src="@drawable/like_button" />
 
         <TextView

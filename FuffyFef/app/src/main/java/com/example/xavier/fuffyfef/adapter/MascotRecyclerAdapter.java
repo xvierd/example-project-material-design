@@ -1,5 +1,6 @@
-package com.example.xavier.fuffyfef;
+package com.example.xavier.fuffyfef.adapter;
 
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,10 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.xavier.fuffyfef.fragment.RecyclerViewFragment;
+import com.example.xavier.fuffyfef.pojo.Mascot;
+import com.example.xavier.fuffyfef.R;
 
 import java.util.ArrayList;
 
@@ -17,10 +22,12 @@ import java.util.ArrayList;
 public class MascotRecyclerAdapter extends RecyclerView.Adapter<MascotRecyclerAdapter.MascotViewHolder> {
 
     ArrayList arrayList = new ArrayList<>();
+    Fragment fragment;
 
 
-    public MascotRecyclerAdapter(ArrayList arrayList) {
+    public MascotRecyclerAdapter(Fragment fragment, ArrayList arrayList) {
         this.arrayList = arrayList;
+        this.fragment = fragment;
     }
 
     @Override
@@ -31,9 +38,12 @@ public class MascotRecyclerAdapter extends RecyclerView.Adapter<MascotRecyclerAd
 
     @Override
     public void onBindViewHolder(MascotViewHolder mascotViewHolder, int position) {
+        if (fragment instanceof RecyclerViewFragment) {
+            mascotViewHolder.image_button_like.setImageResource(R.drawable.like_button);
+            mascotViewHolder.image_button_like.setVisibility(View.VISIBLE);
+            mascotViewHolder.tv_name.setText(((Mascot) arrayList.get(position)).getName());
+        }
         mascotViewHolder.img_mascot.setImageResource(((Mascot) arrayList.get(position)).getImage());
-        mascotViewHolder.image_button_like.setImageResource(R.drawable.like_button);
-        mascotViewHolder.tv_name.setText(((Mascot) arrayList.get(position)).getName());
         mascotViewHolder.img_total_likes.setImageResource(R.drawable.total_likes);
         mascotViewHolder.tv_total_like.setText(String.valueOf(((Mascot) arrayList.get(position)).getTotalLikes()));
     }
