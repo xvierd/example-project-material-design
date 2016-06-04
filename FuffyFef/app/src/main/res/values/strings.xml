@@ -11,6 +11,6 @@
     <string name="hint_name">Nombre: </string>
     <string name="hint_email">Correo</string>
     <string name="hint_message">Descripción del mensaje</string>
-    <string name="send">enviar</string>
+    <string name="send">enviar comentario</string>
 
 </resources>
