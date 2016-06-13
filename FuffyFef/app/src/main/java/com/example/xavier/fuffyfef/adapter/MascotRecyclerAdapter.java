@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.xavier.fuffyfef.fragment.RecyclerViewFragment;
-import com.example.xavier.fuffyfef.pojo.Mascot;
+import com.example.xavier.fuffyfef.model.Mascot;
 import com.example.xavier.fuffyfef.R;
 
 import java.util.ArrayList;

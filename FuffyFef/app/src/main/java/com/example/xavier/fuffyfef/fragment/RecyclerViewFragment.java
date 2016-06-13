@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.xavier.fuffyfef.adapter.MascotRecyclerAdapter;
-import com.example.xavier.fuffyfef.pojo.Mascot;
+import com.example.xavier.fuffyfef.model.Mascot;
 import com.example.xavier.fuffyfef.R;
 
 import java.util.ArrayList;
@@ -39,14 +39,14 @@ public class RecyclerViewFragment extends Fragment {
     }
 
     private void initializeData() {
-        mascots.add(new Mascot("Fofy", 0, R.drawable.mascot_1, 0));
-        mascots.add(new Mascot("Paquita", 0, R.drawable.mascot_2, 0));
-        mascots.add(new Mascot("Candy", 0, R.drawable.mascot_3, 0));
-        mascots.add(new Mascot("Suchi", 0, R.drawable.mascot_4, 0));
-        mascots.add(new Mascot("Feliz", 0, R.drawable.mascot_5, 0));
-        mascots.add(new Mascot("Estrella", 0, R.drawable.mascot_6, 0));
-        mascots.add(new Mascot("Brando", 0, R.drawable.mascot_7, 0));
-        mascots.add(new Mascot("bongo", 0, R.drawable.mascot_8, 0));
+        mascots.add(new Mascot("Fofy", 0, R.drawable.mascot_1));
+        mascots.add(new Mascot("Paquita", 0, R.drawable.mascot_2));
+        mascots.add(new Mascot("Candy", 0, R.drawable.mascot_3));
+        mascots.add(new Mascot("Suchi", 0, R.drawable.mascot_4));
+        mascots.add(new Mascot("Feliz", 0, R.drawable.mascot_5));
+        mascots.add(new Mascot("Estrella", 0, R.drawable.mascot_6));
+        mascots.add(new Mascot("Brando", 0, R.drawable.mascot_7));
+        mascots.add(new Mascot("bongo", 0, R.drawable.mascot_8));
     }
 
 }

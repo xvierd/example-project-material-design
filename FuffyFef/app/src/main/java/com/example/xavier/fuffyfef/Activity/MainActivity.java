@@ -1,4 +1,4 @@
-package com.example.xavier.fuffyfef;
+package com.example.xavier.fuffyfef.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,13 +12,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.example.xavier.fuffyfef.Activity.AboutMeActivity;
+import com.example.xavier.fuffyfef.Activity.ContactActivity;
+import com.example.xavier.fuffyfef.Activity.FavoriteMascots;
+import com.example.xavier.fuffyfef.R;
 import com.example.xavier.fuffyfef.adapter.PageAdapter;
 import com.example.xavier.fuffyfef.fragment.ProfileMascotFragment;
 import com.example.xavier.fuffyfef.fragment.RecyclerViewFragment;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, IMainActivity {
 
 
     private ImageButton img_button_start;
@@ -44,7 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private ArrayList<Fragment> addFragments() {
+    @Override
+    public ArrayList<Fragment> addFragments() {
         ArrayList<Fragment> fragments = new ArrayList<>();
 
         fragments.add(new RecyclerViewFragment());
@@ -73,7 +78,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 
-    private void setUpViewPager() {
+    @Override
+    public void setUpViewPager() {
 
         view_pager.setAdapter(new PageAdapter(getSupportFragmentManager(), addFragments()));
         tab_layout.setupWithViewPager(view_pager);

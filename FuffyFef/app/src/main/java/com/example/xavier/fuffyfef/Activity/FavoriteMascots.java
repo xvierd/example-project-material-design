@@ -1,4 +1,4 @@
-package com.example.xavier.fuffyfef;
+package com.example.xavier.fuffyfef.Activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,15 +6,17 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import com.example.xavier.fuffyfef.R;
 import com.example.xavier.fuffyfef.adapter.MascotRecyclerAdapter;
-import com.example.xavier.fuffyfef.pojo.Mascot;
+import com.example.xavier.fuffyfef.model.Mascot;
 
 import java.util.ArrayList;
 
-public class FavoriteMascots extends AppCompatActivity {
+public class FavoriteMascots extends AppCompatActivity implements IFavoriteMascotsView {
 
     ArrayList<Mascot> mascots = new ArrayList<>();
     RecyclerView recyclerView;
+    private IFavorteMascotsPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,20 +28,28 @@ public class FavoriteMascots extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setIcon(R.drawable.icon_app);
-        initializeData();
         recyclerView = (RecyclerView) findViewById(R.id.rc_mascots);
+        presenter = new FavoriteMascotsPresenter(this,getApplicationContext());
+
+    }
+
+
+    @Override
+    public void generteLinearLayoutVertical() {
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(llm);
-        MascotRecyclerAdapter adapter = new MascotRecyclerAdapter(null,mascots);
-        recyclerView.setAdapter(adapter);
     }
 
-    private void initializeData() {
-        mascots.add(new Mascot("Fofy", 0, R.drawable.mascot_1, 0));
-        mascots.add(new Mascot("Paquita", 0, R.drawable.mascot_2, 0));
-        mascots.add(new Mascot("Candy", 0, R.drawable.mascot_3, 0));
-        mascots.add(new Mascot("Suchi", 0, R.drawable.mascot_4, 0));
-        mascots.add(new Mascot("Feliz", 0, R.drawable.mascot_5, 0));
+    @Override
+    public MascotRecyclerAdapter createAdapter(ArrayList<Mascot> mascots) {
+        MascotRecyclerAdapter adapter = new MascotRecyclerAdapter(null,mascots);
+        return adapter;
+    }
+
+    @Override
+    public void initializeAdapterRV(MascotRecyclerAdapter adapter) {
+        recyclerView.setAdapter(adapter);
+
     }
 }

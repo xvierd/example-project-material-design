@@ -1,4 +1,4 @@
-package com.example.xavier.fuffyfef;
+package com.example.xavier.fuffyfef.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.xavier.fuffyfef.R;
 import com.example.xavier.fuffyfef.config.SendMail;
 
 public class ContactActivity extends AppCompatActivity implements View.OnClickListener {

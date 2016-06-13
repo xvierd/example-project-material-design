@@ -1,19 +1,23 @@
-package com.example.xavier.fuffyfef.pojo;
+package com.example.xavier.fuffyfef.model;
 
 /**
  * Created by xavier on 28/05/16.
  */
 public class Mascot {
+
+    private int id;
     private String name;
     private int likes = 0;
     private int image;
-    private int totalLikes = 0;
 
-    public Mascot(String name, int likes, int image, int totalLikes) {
+    public Mascot(String name, int likes, int image) {
         this.name = name;
         this.likes = likes;
         this.image = image;
-        this.totalLikes = totalLikes;
+    }
+
+    public Mascot() {
+
     }
 
     public String getName() {
@@ -40,11 +44,11 @@ public class Mascot {
         this.image = image;
     }
 
-    public int getTotalLikes() {
-        return totalLikes;
+    public int getId() {
+        return id;
     }
 
-    public void setTotalLikes(int totalLikes) {
-        this.totalLikes = totalLikes;
+    public void setId(int id) {
+        this.id = id;
     }
 }

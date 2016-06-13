@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.xavier.fuffyfef.R;
 import com.example.xavier.fuffyfef.adapter.MascotRecyclerAdapter;
-import com.example.xavier.fuffyfef.pojo.Mascot;
+import com.example.xavier.fuffyfef.model.Mascot;
 
 import java.util.ArrayList;
 
